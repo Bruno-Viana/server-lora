@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Dados {% endblock %}</h1>
+    {% for dado in dados %}
+        <div class='post'>
+            <h2>Índice: {{ dado['id'] }}</h2>
+            <p>Dado recebido: {{ dado['received_value'] }}</p>
+            <p>{{ dado['timestamp_collected']|strftime2 }}</p>
+            <p>{{ dado['timestamp_sync']|strftime }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

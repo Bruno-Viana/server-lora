@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS dados;
+
+CREATE TABLE dados (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp_sync TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    timestamp_collected TIMESTAMP NOT NULL,
+    received_value float NOT NULL
+);
