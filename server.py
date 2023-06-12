@@ -66,7 +66,7 @@ def _jinja2_filter_datetime(date, fmt=None):
     date=int(date)
     dt_object = datetime.datetime.fromtimestamp(date)
     dt_brasil = dt_object.strftime("%d/%m/%Y %H:%M:%S")
-    strfinal = f"Timestamp de sincronização: {date} --- Formatado em data: {dt_brasil}"
+    strfinal = f"{dt_brasil}"
     return strfinal
 
 @app.template_filter('strftime2')
@@ -74,7 +74,7 @@ def _jinja2_filter_datetime(date, fmt=None):
     date=int(date)
     dt_object = datetime.datetime.fromtimestamp(date)
     dt_brasil = dt_object.strftime("%d/%m/%Y %H:%M:%S")
-    strfinal = f"Timestamp de Coleta: {date} --- Formatado em data: {dt_brasil}"
+    strfinal = f"{dt_brasil}"
     return strfinal
 
 if __name__ == '__main__':
